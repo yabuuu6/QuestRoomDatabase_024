@@ -14,4 +14,6 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class UpdateMhsViewModel(
-   )
+    savedStateHandle: SavedStateHandle,
+    private val repositoryMhs: RepositoryMhs
+)
