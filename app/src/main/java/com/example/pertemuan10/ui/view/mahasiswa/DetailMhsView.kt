@@ -172,3 +172,26 @@ fun ItemDetailMhs(
     }
 }
 
+@Composable
+fun ComponentDetailMhs(
+    modifier: Modifier =Modifier,
+    judul: String,
+    isinya: String,
+){
+    Column(modifier =modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.Start)
+    {
+        Text(
+            text = "$judul : ",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Gray
+        )
+        Text(
+            text = isinya,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }
+}
+
