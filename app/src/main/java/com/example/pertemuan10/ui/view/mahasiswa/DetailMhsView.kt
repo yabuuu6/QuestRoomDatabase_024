@@ -142,3 +142,33 @@ fun BodyDetailMhs(
     }
 }
 
+@Composable
+fun ItemDetailMhs(
+    modifier: Modifier = Modifier,
+    mahasiswa: Mahasiswa
+){
+    Card (
+        modifier = modifier.fillMaxWidth().padding(top = 20.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+        )
+    ) {
+        Column(modifier = Modifier.padding(16.dp)
+        ) {
+            ComponentDetailMhs(judul = "NIM", isinya = mahasiswa.nim)
+            Spacer(modifier =Modifier.padding(5.dp))
+            ComponentDetailMhs(judul = "Nama", isinya = mahasiswa.nama)
+            Spacer(modifier =Modifier.padding(5.dp))
+            ComponentDetailMhs(judul = "Alamat", isinya = mahasiswa.alamat)
+            Spacer(modifier =Modifier.padding(5.dp))
+            ComponentDetailMhs(judul = "Jenis Kelamin", isinya = mahasiswa.jenisKelamin)
+            Spacer(modifier =Modifier.padding(5.dp))
+            ComponentDetailMhs(judul = "Kelas", isinya = mahasiswa.kelas)
+            Spacer(modifier =Modifier.padding(5.dp))
+            ComponentDetailMhs(judul = "Angkatan", isinya = mahasiswa.angkatan)
+
+        }
+    }
+}
+
